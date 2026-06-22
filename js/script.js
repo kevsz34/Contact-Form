@@ -56,9 +56,12 @@ function submit(event){
     p.classList.remove("pError");
     p.textContent = ""
     });
+    generalE.closest("label").classList.remove("inpError");
+    supportR.closest("label").classList.remove("inpError");
     meError.classList.remove("pError");
     messageA.classList.remove("inpError");
     messageA.removeAttribute("aria-invalid");
+
 
 
     if(isEmpty(inpFN.value)){
@@ -91,7 +94,9 @@ function submit(event){
     }
 
         if(!(generalE.checked || supportR.checked)){
-        radError.classList.add("pError")
+        generalE.closest("label").classList.add("inpError");
+        supportR.closest("label").classList.add("inpError");
+        radError.classList.add("pError");
         radError.textContent = "Please select a query type"
         generalE.setAttribute("aria-invalid", "true");
         supportR.setAttribute("aria-invalid", "true");
