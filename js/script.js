@@ -16,12 +16,12 @@ const consentBox = document.getElementById("consentBox");
 //All error "p"
 const pErrorL = document.querySelectorAll("p");
 
-const FNError = document.querySelector(".FNError");
-const SNError = document.querySelector(".SNError");
-const emError = document.querySelector(".emError");
-const radError = document.querySelector(".radError");
-const meError = document.querySelector(".meError");
-const boxError = document.querySelector(".boxError");
+const fnError = document.getElementById("fnError");
+const snError = document.getElementById("snError");
+const emError = document.getElementById("emError");
+const radError = document.getElementById("radError");
+const meError = document.getElementById("meError");
+const boxError = document.getElementById("boxError");
 
 
 
@@ -56,16 +56,16 @@ function submit(){
 });
 
     if(isEmpty(inpFN.value)){
-        FNError.classList.add("pError")
+        fnError.classList.add("pError")
         inpFN.classList.add("inpError")
-        FNError.textContent = "This field is required"
+        fnError.textContent = "This field is required"
         valid = false
     }
 
         if(isEmpty(inpSN.value)){
-        SNError.classList.add("pError")
+        snError.classList.add("pError")
         inpSN.classList.add("inpError")
-        SNError.textContent = "This field is required"
+        snError.textContent = "This field is required"
         valid = false
     }
 
