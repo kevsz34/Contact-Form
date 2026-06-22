@@ -86,8 +86,11 @@ input, .radioOpt{
     border-radius: 10px;
     border: 1px solid var(--grey-900);
 }
-    input:focus{
+input:focus, .radioOpt:focus{
     border: 2px solid var(--green-600)
+}
+#consentBox:focus-visible{
+    border: 2px solid var(--green-600);
 }
 
 span{
